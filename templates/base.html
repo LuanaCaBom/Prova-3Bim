@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+</head>
+<body>
+    <header>
+        <div><a href="/"><img src="/static/img/bug.png" alt="logo"></a></div>
+        <nav>
+            <div><a href="/clientes">Clientes</a></div>             
+            <div><a href="/reclamacoes">Reclamações</a></div>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+

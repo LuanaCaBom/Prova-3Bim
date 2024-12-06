@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="mainadd">
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="add">
+        <button class="btadd"><a href="/clientes/add">Adicionar</a></button>
+    </div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        {% for c in clientes %}
+        <tr>
+            <td>{{c.nome}}</td>
+            <td>{{c.telefone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+
+{% endblock %}

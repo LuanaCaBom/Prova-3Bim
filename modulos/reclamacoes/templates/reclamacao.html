@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="mainadd">
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="add">
+        <button class="btadd"><a href="/reclamacoes/add">Adicionar</a></button>
+    </div>
+    <table>
+        <tr>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Cliente</th>
+            <th>Remover</th>
+        </tr>
+        {% for r in reclamacoes %}
+        <tr>
+            <td>{{r.descricao}}</td>
+            <td>{{r.data}}</td>
+            <td>{{r.cliente.nome}}</td>
+            <td>
+                <a href="/reclamacoes/remove/{{r.id}}"><img class="lixeira" src="/static/img/lixeira.png" alt="lixeira"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+
+{% endblock %}

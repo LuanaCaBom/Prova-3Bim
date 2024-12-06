@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --primary: #FDAE02;
+    --secondary: #5A5F64;
+    --alert: #ff0000;
+    --white: #fff;
+    --black: #000;
+}
+
+/*header*/
+
+header{
+    display: flex;
+    background-color: var(--primary);
+    align-items: center;
+    justify-content: left;
+    height: 6rem;
+}
+
+header img{
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+nav div a{
+    color: var(--black);
+    text-decoration: none;
+    padding-right: 3rem;
+}
+
+/*main*/
+
+main{
+    min-height: calc(100vh - 11rem);
+    display: flex;
+    padding-top: 1rem;
+    align-items: top;
+    justify-content: center;
+}
+
+.ola{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+button{
+    background-color:var(--secondary);
+    padding: 2px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.3rem;
+    color: var(--white)
+}
+
+button a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+form{
+    display: grid;
+    align-items: top;
+    justify-content: center;
+}
+
+.entrada{
+    padding-bottom: 1rem;
+}
+
+label{
+    font-size: 1.6rem;
+}
+
+input{
+    width: 30rem;
+}
+
+.nome{
+    padding-right: 1.7rem;
+}
+
+.data{
+    padding-right: 4rem;
+}
+
+.descricao{
+    padding-right: 0.6rem;
+}
+
+.cliente{
+    padding-right: 2.3rem;
+}
+
+select{
+    width: 30rem;
+}
+
+table tr, td, th{
+    border: 2px solid var(--black);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+
+
+.msg{
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--alert);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.btadd{
+    border: none;
+    width: 110px;
+}
+
+.mainadd{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.lixeira{
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
